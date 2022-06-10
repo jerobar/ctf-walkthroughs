@@ -38,7 +38,7 @@ bandit5@bandit:~$ man ls
 
 Becoming comfortable reading the man pages will pay off as you work to develop Linux proficiency. This documentation should be the first resource you consult before Googling how a command works.
 
-#### Using The find Command
+#### Using the find Command
 
 There are a number of ways this search can be performed. Below is just one example:
 

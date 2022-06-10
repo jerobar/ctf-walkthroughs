@@ -16,6 +16,7 @@
   * [Bandit - Level 8](linux/overthewire-bandit/bandit-level-8.md)
   * [Bandit - Level 9](linux/overthewire-bandit/bandit-level-9.md)
   * [Bandit - Level 10](linux/overthewire-bandit/bandit-level-10.md)
+  * [Bandit - Level 11](linux/overthewire-bandit/bandit-level-11.md)
 
 ## Web Security
 

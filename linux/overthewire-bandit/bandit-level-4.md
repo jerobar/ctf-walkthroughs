@@ -1,10 +1,10 @@
 ---
-description: Level four is a first look at examining simple file properties.
+description: Level Four is a first look at examining simple file properties.
 ---
 
 # Bandit - Level 4
 
-[Level four](https://overthewire.org/wargames/bandit/bandit5.html) instructs us to look at the only “human-readable” file in the **inhere** directory.
+[Level Four](https://overthewire.org/wargames/bandit/bandit5.html) instructs us to look at the only “human-readable” file in the **inhere** directory.
 
 ### Hints
 

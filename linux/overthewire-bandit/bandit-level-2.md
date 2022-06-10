@@ -1,12 +1,12 @@
 ---
 description: >-
-  Level two covers another example of working with the cat command and special
+  Level Two covers another example of working with the cat command and special
   characters.
 ---
 
 # Bandit - Level 2
 
-[Level two](https://overthewire.org/wargames/bandit/bandit3.html) tells us the flag is in a file called **spaces in this filename**.
+[Level Two](https://overthewire.org/wargames/bandit/bandit3.html) tells us the flag is in a file called **spaces in this filename**.
 
 ### Hints
 

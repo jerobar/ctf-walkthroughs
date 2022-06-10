@@ -1,12 +1,12 @@
 ---
 description: >-
-  In Level three, we’re introduced to changing from one directory to another and
+  In Level Three, we’re introduced to changing from one directory to another and
   viewing hidden files.
 ---
 
 # Bandit - Level 3
 
-[Level three](https://overthewire.org/wargames/bandit/bandit4.html) states the flag is in a hidden file in the **inhere** directory.
+[Level Three](https://overthewire.org/wargames/bandit/bandit4.html) states the flag is in a hidden file in the **inhere** directory.
 
 ### Hints
 

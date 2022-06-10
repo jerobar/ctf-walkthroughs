@@ -30,7 +30,7 @@ When we attempt to use the command `cat -`, the shell is expecting an option to 
 The location of a file can be specified _absolutely_, that is, relative to the system’s root directory, or _relatively_, relative to the current directory the user is in. Absolute paths begin with `/`, which denotes the root (or “top-most”) directory, while relative paths may begin with `./` to denote the current directory or `../` to specify one directory up from the current. The command `pwd` (“print working directory”) can be used to show the absolute location of the directory currently being browsed.
 {% endhint %}
 
-**Showing the current directory with pwd:**
+**Showing the current directory with `pwd`:**
 
 ```shell-session
 bandit1@bandit:~$ pwd

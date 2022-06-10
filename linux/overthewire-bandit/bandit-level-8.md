@@ -1,5 +1,5 @@
 ---
-description: In level eight we look at identifying one unique string among many.
+description: In Level Eight we look at identifying one unique string among many.
 ---
 
 # Bandit - Level 8

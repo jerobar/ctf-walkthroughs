@@ -37,6 +37,7 @@
   * [2 - Fallout](blockchain/openzeppelin-ethernaut/2-fallout.md)
   * [3 - Coin Flip](blockchain/openzeppelin-ethernaut/3-coin-flip.md)
   * [4 - Telephone](blockchain/openzeppelin-ethernaut/4-telephone.md)
+  * [5 - Token](blockchain/openzeppelin-ethernaut/5-token.md)
 
 ## Supplementary Material
 

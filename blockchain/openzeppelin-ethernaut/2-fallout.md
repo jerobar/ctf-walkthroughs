@@ -12,7 +12,7 @@ To complete [this level](https://ethernaut.openzeppelin.com/level/0x5732B2F88cbd
 
 <summary>Hint One</summary>
 
-The only function in the contract that assigns a value to `owner` is its "constructor", `Fal1out`. Is this function really what it seems?
+The only function in the contract that assigns a value to `owner` is its "constructor", `Fal1out`. Is this function really what it seems?&#x20;
 
 </details>
 
@@ -63,7 +63,7 @@ async function setup(contractName) {
   // Create player wallet
   const playerWallet = new ethers.Wallet(process.env.PRIVATE_KEY)
   // Create player wallet signer - an abstraction of an Ethereum account
-  const playerWalletSigner = await playerWallet.connect(provider)
+  const playerWalletSigner = await wallet.connect(provider)
   // Create contract instance - an abstraction of the deployed contract code
   const contractAbi = fs.readFileSync(`./${contractName}.abi`, 'utf8')
   const contract = new ethers.Contract(
@@ -80,7 +80,7 @@ async function setup(contractName) {
  */
 async function main() {
   // Get Ethers objects needed to interact with the blockchain and contract
-  const { playerWallet, contract: falloutContract } = await setup('Fallout')
+  const { playerWallet, contract: falloutContract } = setup('Fallout')
 
   // Check Fallout contract's owner
   console.log(
@@ -111,3 +111,4 @@ main()
 
 * Some older versions of Solidity allowed for **constructors** to be defined as functions with the **same name as the contract** itself.
 * Even a single, simple **syntax error** can become a **security disaster**.
+

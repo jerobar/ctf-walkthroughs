@@ -89,7 +89,7 @@ async function setup(contractName) {
   // Create player wallet
   const playerWallet = new ethers.Wallet(process.env.PRIVATE_KEY)
   // Create player wallet signer - an abstraction of an Ethereum account
-  const playerWalletSigner = await playerWallet.connect(provider)
+  const playerWalletSigner = await wallet.connect(provider)
   // Create contract instance - an abstraction of the deployed contract code
   const contractAbi = fs.readFileSync(`./${contractName}.abi`, 'utf8')
   const contract = new ethers.Contract(
@@ -111,7 +111,7 @@ async function main() {
     playerWallet,
     playerWalletSigner,
     contract: fallbackContract,
-  } = await setup('Fallback')
+  } = setup('Fallback')
 
   // Contribute 0.0001 ether via Fallback contract's 'contribute' function
   const contributionValue = ethers.utils.parseEther('0.0001')

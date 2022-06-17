@@ -4,6 +4,12 @@ description: Lab Two involves an SQL injection vulnerability allowing login bypa
 
 # 2 - Login Bypass
 
+### Notes
+
+
+
+### Scripted Solution
+
 ```python
 from bs4 import BeautifulSoup
 import urllib3

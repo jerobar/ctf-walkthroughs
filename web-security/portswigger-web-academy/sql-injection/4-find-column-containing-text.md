@@ -4,6 +4,12 @@ description: SQL injection UNION attack, finding a column containing text.
 
 # 4 - Find Column Containing Text
 
+### Notes
+
+
+
+### Scripted Solution
+
 ```python
 import urllib3
 import requests

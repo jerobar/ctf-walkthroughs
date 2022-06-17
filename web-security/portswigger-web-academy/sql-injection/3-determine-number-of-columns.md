@@ -6,6 +6,12 @@ description: >-
 
 # 3 - Determine Number of Columns
 
+### Notes
+
+
+
+### Scripted Solution
+
 ```python
 import urllib3
 import requests

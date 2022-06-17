@@ -58,7 +58,13 @@ function flip(bool _guess) public returns (bool) {
 
 As we can determine the `blockValue` before calling the contract's `flip` function, we simply need to implement our own matching flip function to calculate our "guess" in advance of each transaction.
 
-We'll write our own "proxy contract" in Solidity to handle making our guesses.
+We'll write our own "proxy contract" in Solidity to handle calculating the outcome of the coin flip and then calling the `flip` function on the `CoinFlip` contract. Our contract will contain a `guess` function that will just need to be called ten times in a row. The approach below will always work as we will be executing both the calculation of our guess and the result of the `flip` function at once, meaning everything will be included in the same block so both contracts will have the same value of `block.number` (the current block height in which the transaction is being mined).
+
+{% hint style="info" %}
+**Global Variables and Global Functions**
+
+We see both `block.number` and `blockHash` are accessible from within the smart contracts without being defined. This is because Solidity makes a number of useful variables and functions globally available. You can learn more in the Solidity [documentation](https://docs.soliditylang.org/en/v0.8.10/units-and-global-variables.html).
+{% endhint %}
 
 ### Scripted Solution
 
@@ -95,3 +101,4 @@ contract CoinFlipExploit {
 
 * Generating sufficiently random data is a challenge on a _**deterministic**_\*\* blockchain\*\* and is a problem best left to industry standard solutions like the Chainlink oracle's "Verifiable Random Function".
 * Smart contracts on public blockchains are auditable by anyone. Any attempts to hide clever tricks in a contract's code are therefor ultimately futile.
+* Solidity contains a number of useful globally available variables and functions we can use when writing our own contracts.

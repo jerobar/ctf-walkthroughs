@@ -24,6 +24,8 @@
 ## Web Security
 
 * [Portswigger - Web Academy](web-security/portswigger-web-academy/README.md)
+  * [Authentication](web-security/portswigger-web-academy/authentication/README.md)
+    * [1 - Username Enumeration](web-security/portswigger-web-academy/authentication/1-username-enumeration.md)
   * [SQL Injection](web-security/portswigger-web-academy/sql-injection/README.md)
     * [1 - Retrieve Hidden Data](web-security/portswigger-web-academy/sql-injection/1-retrieve-hidden-data.md)
 

@@ -56,10 +56,7 @@ async function main() {
     cartDom.window.document.querySelector('input[name="csrf"]').value
 
   // Order jacket
-  await client.post(
-    `${labUrl}/cart/checkout`,
-    `csrf=${cartCsrfToken}`
-  )
+  await client.post(`${labUrl}/cart/checkout`, `csrf=${cartCsrfToken}`)
 }
 
 main()

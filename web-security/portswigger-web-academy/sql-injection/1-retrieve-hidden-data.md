@@ -8,7 +8,7 @@ description: >-
 
 ### Notes
 
-The SQLi exists in the `category` query parameter used by the category filter feature:
+The SQLi exists in the `category` query parameter used by the product category filter feature:
 
 ```http
 GET /filter?category=%27+OR+1=1-- HTTP/1.1
@@ -50,5 +50,4 @@ main()
     console.error(error)
     process.exit(1)
   })
-java
 ```

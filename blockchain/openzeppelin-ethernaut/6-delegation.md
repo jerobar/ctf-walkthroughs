@@ -9,8 +9,8 @@ description: >-
 ### Scripted Solution
 
 ```javascript
-const ethers = require('ethers')
 const fs = require('fs')
+const ethers = require('ethers')
 require('dotenv').config({ path: './.env' })
 
 /**

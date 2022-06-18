@@ -26,9 +26,6 @@
 * [Portswigger - Web Academy](web-security/portswigger-web-academy/README.md)
   * [SQL Injection](web-security/portswigger-web-academy/sql-injection/README.md)
     * [1 - Retrieve Hidden Data](web-security/portswigger-web-academy/sql-injection/1-retrieve-hidden-data.md)
-    * [2 - Login Bypass](web-security/portswigger-web-academy/sql-injection/2-login-bypass.md)
-    * [3 - Determine Number of Columns](web-security/portswigger-web-academy/sql-injection/3-determine-number-of-columns.md)
-    * [4 - Find Column Containing Text](web-security/portswigger-web-academy/sql-injection/4-find-column-containing-text.md)
 
 ## Blockchain
 

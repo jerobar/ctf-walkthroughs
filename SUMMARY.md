@@ -24,6 +24,8 @@
 ## Web Security
 
 * [Portswigger - Web Academy](web-security/portswigger-web-academy/README.md)
+  * [Directory Traversal](web-security/portswigger-web-academy/directory-traversal/README.md)
+    * [1 - Simple Case](web-security/portswigger-web-academy/directory-traversal/1-simple-case.md)
   * [Authentication](web-security/portswigger-web-academy/authentication/README.md)
     * [1 - Username Enumeration](web-security/portswigger-web-academy/authentication/1-username-enumeration.md)
   * [SQL Injection](web-security/portswigger-web-academy/sql-injection/README.md)

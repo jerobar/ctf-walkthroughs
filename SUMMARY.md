@@ -45,6 +45,7 @@
   * [5 - Token](blockchain/openzeppelin-ethernaut/5-token.md)
   * [6 - Delegation](blockchain/openzeppelin-ethernaut/6-delegation.md)
   * [7 - Force](blockchain/openzeppelin-ethernaut/7-force.md)
+  * [8 - Vault](blockchain/openzeppelin-ethernaut/8-vault.md)
 
 ## Supplementary Material
 

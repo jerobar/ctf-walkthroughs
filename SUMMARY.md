@@ -44,6 +44,7 @@
   * [4 - Telephone](blockchain/openzeppelin-ethernaut/4-telephone.md)
   * [5 - Token](blockchain/openzeppelin-ethernaut/5-token.md)
   * [6 - Delegation](blockchain/openzeppelin-ethernaut/6-delegation.md)
+  * [7 - Force](blockchain/openzeppelin-ethernaut/7-force.md)
 
 ## Supplementary Material
 

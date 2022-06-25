@@ -1,12 +1,12 @@
 ---
-description: In Ethereum's vault, we look at how "private" on-chain data really is.
+description: In Ethernaut's Vault, we look at how "private" on-chain data really is.
 ---
 
 # 8 - Vault
 
 ### Notes
 
-Variables are stored in "slots" - often slot index position starting from 0, by variable, but Ethereum tries to make storage as efficient as possible and may mix this up.
+Variables are stored in "slots" - often slot index position starting from 0, by variable, but Ethereum tries to make storage as efficient as possible and may mix this up.&#x20;
 
 ### Scripted Solution
 

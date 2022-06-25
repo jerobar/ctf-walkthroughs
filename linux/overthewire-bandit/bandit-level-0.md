@@ -38,7 +38,7 @@ SSH or “Secure Shell” is a networking protocol used to interact with a remot
 
 To run the SSH program from our shell, we will use the command ssh followed by the details of our connection, like the name of the remote host, port number, and our username:
 
-**Connecting to host bandit.labs.overthewire.org on port (-p) 2220 with username Bandit0:**
+**Connecting to host bandit.labs.overthewire.org on port (`-p`) 2220 with username Bandit0:**
 
 ```shell-session
 user@localhost:~$ ssh bandit0@bandit.labs.overthewire.org –p 2220
@@ -68,7 +68,7 @@ You may notice that the prompt of the shell has changed since we’ve logged in 
 
 So, if we are currently in the home directory where the **readme** file we are searching for is supposedly located, we should be able to see it by listing the contents of the directory. We do so with one of the most frequently used Linux commands, `ls` (list).\
 \
-**Listing the contents of the current directory with the ls command:**
+**Listing the contents of the current directory with the `ls` command:**
 
 ```shell-session
 bandit0@bandit:~$ ls
@@ -79,7 +79,7 @@ Like most operating systems, Linux organizes files into directories, which are n
 
 To read the contents of this **readme** file, we use a command called `cat`. Cat is short for _concatenate_ and it’s named so because the command _concatenates_ all the files passed to it as arguments and prints their contents to standard output for us to read. If it’s just passed one file, there is nothing to concatenate and the contents of that single file are simply printed to the screen.
 
-**Reading a file with the cat command:**
+**Reading a file with the `cat` command:**
 
 ```shell-session
 bandit0@bandit:~$ cat readme

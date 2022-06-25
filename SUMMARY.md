@@ -46,7 +46,3 @@
   * [6 - Delegation](blockchain/openzeppelin-ethernaut/6-delegation.md)
   * [7 - Force](blockchain/openzeppelin-ethernaut/7-force.md)
   * [8 - Vault](blockchain/openzeppelin-ethernaut/8-vault.md)
-
-## Supplementary Material
-
-* [Ethereum Transactions](supplementary-material/ethereum-transactions.md)

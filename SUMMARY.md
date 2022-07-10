@@ -46,6 +46,8 @@
     * [1 - XXE To Retrieve Files](web-security/portswigger-web-academy/xxe-injection/1-xxe-to-retrieve-files.md)
   * [Cross-Site Scripting](web-security/portswigger-web-academy/cross-site-scripting/README.md)
     * [1 - Reflected Nothing Encoded](web-security/portswigger-web-academy/cross-site-scripting/1-reflected-nothing-encoded.md)
+  * [Cross-Site Request Forgery](web-security/portswigger-web-academy/cross-site-request-forgery/README.md)
+    * [1 - CSRF With No Defenses](web-security/portswigger-web-academy/cross-site-request-forgery/1-csrf-with-no-defenses.md)
 
 ## Blockchain
 

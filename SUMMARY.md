@@ -24,6 +24,8 @@
 ## Web Security
 
 * [Portswigger - Web Academy](web-security/portswigger-web-academy/README.md)
+  * [Information Disclosure](web-security/portswigger-web-academy/information-disclosure/README.md)
+    * [1 - Error Messages](web-security/portswigger-web-academy/information-disclosure/1-error-messages.md)
   * [Business Logic](web-security/portswigger-web-academy/business-logic/README.md)
     * [1 - Excessive client-side trust](web-security/portswigger-web-academy/business-logic/1-excessive-client-side-trust.md)
   * [Command Injection](web-security/portswigger-web-academy/command-injection/README.md)

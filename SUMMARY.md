@@ -52,6 +52,8 @@
     * [1 - Basic Origin Reflection](web-security/portswigger-web-academy/cors/1-basic-origin-reflection.md)
   * [Clickjacking](web-security/portswigger-web-academy/clickjacking/README.md)
     * [1 - Basic With CSRF Token](web-security/portswigger-web-academy/clickjacking/1-basic-with-csrf-token.md)
+  * [DOM-Based](web-security/portswigger-web-academy/dom-based/README.md)
+    * [1 - XSS Web Messages](web-security/portswigger-web-academy/dom-based/1-xss-web-messages.md)
 
 ## Blockchain
 

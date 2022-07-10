@@ -48,6 +48,8 @@
     * [1 - Reflected Nothing Encoded](web-security/portswigger-web-academy/cross-site-scripting/1-reflected-nothing-encoded.md)
   * [Cross-Site Request Forgery](web-security/portswigger-web-academy/cross-site-request-forgery/README.md)
     * [1 - CSRF With No Defenses](web-security/portswigger-web-academy/cross-site-request-forgery/1-csrf-with-no-defenses.md)
+  * [CORS](web-security/portswigger-web-academy/cors/README.md)
+    * [1 - Basic Origin Reflection](web-security/portswigger-web-academy/cors/1-basic-origin-reflection.md)
 
 ## Blockchain
 

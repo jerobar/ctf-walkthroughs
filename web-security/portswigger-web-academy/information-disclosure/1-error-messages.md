@@ -25,7 +25,6 @@ Apache Struts 2 2.3.31
 
 ```javascript
 const axios = require('axios').default
-const { JSDOM } = require('jsdom')
 require('dotenv').config({ path: './.env' })
 
 /**

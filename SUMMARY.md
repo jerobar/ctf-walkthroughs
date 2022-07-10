@@ -24,6 +24,7 @@
 ## Web Security
 
 * [Portswigger - Web Academy](web-security/portswigger-web-academy/README.md)
+  * [Cross-Site Scripting](web-security/portswigger-web-academy/cross-site-scripting.md)
   * [XXE Injection](web-security/portswigger-web-academy/xxe-injection/README.md)
     * [1 - XXE To Retrieve Files](web-security/portswigger-web-academy/xxe-injection/1-xxe-to-retrieve-files.md)
   * [SSRF](web-security/portswigger-web-academy/ssrf/README.md)

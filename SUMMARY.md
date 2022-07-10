@@ -24,6 +24,8 @@
 ## Web Security
 
 * [Portswigger - Web Academy](web-security/portswigger-web-academy/README.md)
+  * [SSRF](web-security/portswigger-web-academy/ssrf/README.md)
+    * [1 - Basic SSRF Against localhost](web-security/portswigger-web-academy/ssrf/1-basic-ssrf-against-localhost.md)
   * [File Upload](web-security/portswigger-web-academy/file-upload/README.md)
     * [1 - RCE Via Shell Upload](web-security/portswigger-web-academy/file-upload/1-rce-via-shell-upload.md)
   * [Access Control](web-security/portswigger-web-academy/access-control/README.md)

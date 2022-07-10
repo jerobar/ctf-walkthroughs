@@ -24,6 +24,8 @@
 ## Web Security
 
 * [Portswigger - Web Academy](web-security/portswigger-web-academy/README.md)
+  * [Access Control](web-security/portswigger-web-academy/access-control/README.md)
+    * [1 - Unprotected Admin](web-security/portswigger-web-academy/access-control/1-unprotected-admin.md)
   * [Information Disclosure](web-security/portswigger-web-academy/information-disclosure/README.md)
     * [1 - Error Messages](web-security/portswigger-web-academy/information-disclosure/1-error-messages.md)
   * [Business Logic](web-security/portswigger-web-academy/business-logic/README.md)

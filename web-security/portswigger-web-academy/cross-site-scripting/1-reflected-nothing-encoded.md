@@ -17,6 +17,8 @@ GET /?search=foobar HTTP/1.1
 </section>
 ```
 
+### Solution
+
 Because this user-supplied input is not properly escaped, we can execute an XSS simply by supplying JavaScript in the `search` query parameter:
 
 ```http

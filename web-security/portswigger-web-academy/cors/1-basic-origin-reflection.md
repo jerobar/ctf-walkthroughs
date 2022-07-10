@@ -30,6 +30,8 @@ Content-Length: 149
 }
 ```
 
+### Solution
+
 The following payload, delivered to the user, can be used to log their API key in the lab's exploit server:
 
 ```html

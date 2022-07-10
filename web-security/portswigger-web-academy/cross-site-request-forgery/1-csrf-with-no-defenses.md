@@ -13,6 +13,8 @@ Cookie: session=rUQaRA2VvHlC8irD8jXmNIcsqxpzgUY2
 email=foo@bar.com
 ```
 
+### Solution
+
 The following CSRF payload delievered to the user will change their email to `wiener@peter.com`:
 
 ```html

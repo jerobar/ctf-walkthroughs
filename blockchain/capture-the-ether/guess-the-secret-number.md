@@ -20,7 +20,7 @@ The hash itself can't be reversed, but is it possible to work in the opposite di
 
 ### Full Walkthrough
 
-We see in reviewing the contract that we are provided with the keccak256 hash of the answer, and asked to submit our guess as a `uint8` (that is the type of the argument of the `guess` function). This may seem like a perfectly secure way to obfuscate data, as the keccak256 hash cannot be reversed. However, the fault lies in the very property that gives hashing functions their value. While they're practically impossible to reverse, hash functions are quick to run _forwards_. That is, if we could narrow the space of possibilities down enough for our input, it would be trivial to brute force the matching hash.
+We see in reviewing the contract that we are provided with the keccak256 hash of the answer, and asked to submit our guess as a `uint8` (that is the type of the argument of the `guess` function). This may seem like a perfectly secure way to obfuscate data, as the keccak256 hash cannot be reversed. However, the fault lies in the very property that gives hashing functions their value. While they're impossible to reverse, hash functions are easy to run _forwards_. That is, if we could narrow the space of possibilities down enough for our input, it would be trivial to brute force the matching hash.
 
 Luckily, as the answer is of type `uint8`, there are only 256 possible solutions (0 - 255). We can brute force the correct answer by looping through each possibility and taking its keccak256 hash, then submitting the result. Ethers.js provides a utility function for just this purpose.
 

@@ -57,6 +57,15 @@
 
 ## Blockchain
 
+* [Capture the Ether](blockchain/capture-the-ether/README.md)
+  * [Guess the number](blockchain/capture-the-ether/guess-the-number.md)
+  * [Guess the secret number](blockchain/capture-the-ether/guess-the-secret-number.md)
+  * [Guess the random number](blockchain/capture-the-ether/guess-the-random-number.md)
+  * [Guess the new number](blockchain/capture-the-ether/guess-the-new-number.md)
+  * [Predict the future](blockchain/capture-the-ether/predict-the-future.md)
+  * [Predict the block hash](blockchain/capture-the-ether/predict-the-block-hash.md)
+  * [Token sale](blockchain/capture-the-ether/token-sale.md)
+  * [Token whale](blockchain/capture-the-ether/token-whale.md)
 * [OpenZeppelin - Ethernaut](blockchain/openzeppelin-ethernaut/README.md)
   * [1 - Fallback](blockchain/openzeppelin-ethernaut/1-fallback.md)
   * [2 - Fallout](blockchain/openzeppelin-ethernaut/2-fallout.md)
@@ -66,3 +75,9 @@
   * [6 - Delegation](blockchain/openzeppelin-ethernaut/6-delegation.md)
   * [7 - Force](blockchain/openzeppelin-ethernaut/7-force.md)
   * [8 - Vault](blockchain/openzeppelin-ethernaut/8-vault.md)
+  * [10 - Re-entrancy](blockchain/openzeppelin-ethernaut/10-re-entrancy.md)
+  * [11 - Elevator](blockchain/openzeppelin-ethernaut/11-elevator.md)
+  * [15 - Naught Coin](blockchain/openzeppelin-ethernaut/15-naught-coin.md)
+  * [17 - Recovery](blockchain/openzeppelin-ethernaut/17-recovery.md)
+  * [20 - Denial](blockchain/openzeppelin-ethernaut/20-denial.md)
+  * [21 - Shop](blockchain/openzeppelin-ethernaut/21-shop.md)

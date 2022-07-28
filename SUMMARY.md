@@ -75,6 +75,7 @@
   * [6 - Delegation](blockchain/openzeppelin-ethernaut/6-delegation.md)
   * [7 - Force](blockchain/openzeppelin-ethernaut/7-force.md)
   * [8 - Vault](blockchain/openzeppelin-ethernaut/8-vault.md)
+  * [9 - King](blockchain/openzeppelin-ethernaut/9-king.md)
   * [10 - Re-entrancy](blockchain/openzeppelin-ethernaut/10-re-entrancy.md)
   * [11 - Elevator](blockchain/openzeppelin-ethernaut/11-elevator.md)
   * [15 - Naught Coin](blockchain/openzeppelin-ethernaut/15-naught-coin.md)

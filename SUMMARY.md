@@ -87,3 +87,4 @@
   * [Puzzle One](blockchain/evm-puzzles/puzzle-one.md)
   * [Puzzle Two](blockchain/evm-puzzles/puzzle-two.md)
   * [Puzzle Three](blockchain/evm-puzzles/puzzle-three.md)
+  * [Puzzle Four](blockchain/evm-puzzles/puzzle-four.md)

@@ -37,4 +37,4 @@ Stack: \[CALLDATASIZE]
 
 ### Solution
 
-We want to set the program counter to 04, which means we need to supply a calldata with a size of 4 bytes. We could supply e.g.: \`0xffffffff\`.&#x20;
+We want to set the program counter to 04, which means we need to supply a calldata with a size of 4 bytes. We could supply e.g.: `0xffffffff`.

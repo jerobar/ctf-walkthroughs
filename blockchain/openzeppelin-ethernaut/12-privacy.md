@@ -91,7 +91,7 @@ async function main() {
   // Unlock contract by calling `unlock` with bytes16 key
   console.log('Unlocking contract with key...')
   const unlock = await privacyContract.unlock(bytes16Key)
-  await unlock.wait(1)
+  unlock.wait(1)
 
   // // Confirm contract is unlocked
   console.log(`Contract locked: ${await privacyContract.locked()}.`)

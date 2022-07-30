@@ -83,3 +83,5 @@
   * [17 - Recovery](blockchain/openzeppelin-ethernaut/17-recovery.md)
   * [20 - Denial](blockchain/openzeppelin-ethernaut/20-denial.md)
   * [21 - Shop](blockchain/openzeppelin-ethernaut/21-shop.md)
+* [EVM puzzles](blockchain/evm-puzzles/README.md)
+  * [Puzzle One](blockchain/evm-puzzles/puzzle-one.md)

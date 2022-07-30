@@ -41,6 +41,8 @@ Stack: \[CODESIZE (10) - CALLVALUE]
 
 `JUMP` - Advances the program counter to the location identified by the value at the top of the stack. In this case, that value is determined by the CODESIZE (10) - CALLVALUE.
 
+Stack: \[CODESIZE (10) - CALLVALUE]
+
 #### Steps 04 & 05
 
 `REVERT` - Halts the program execution, reverting any state changes. Our goal is to avoid the program reaching any of these instructions.

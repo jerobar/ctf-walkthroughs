@@ -85,3 +85,4 @@
   * [21 - Shop](blockchain/openzeppelin-ethernaut/21-shop.md)
 * [EVM puzzles](blockchain/evm-puzzles/README.md)
   * [Puzzle One](blockchain/evm-puzzles/puzzle-one.md)
+  * [Puzzle Two](blockchain/evm-puzzles/puzzle-two.md)

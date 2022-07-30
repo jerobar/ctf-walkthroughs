@@ -43,7 +43,7 @@ Stack: \[CALLVALUE]
 
 Stack: \[CALLVALUE]
 
-#### Solution
+### Solution
 
 We want to provide a value that will allow the `JUMP` instruction at step 01 to advance the program to step 08. Because `JUMP` uses the value currently at the top of the stack, which is set in step 00 to our call value, we can achieve this goal by providing the value 8.
 

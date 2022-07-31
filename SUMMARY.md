@@ -79,6 +79,7 @@
   * [10 - Re-entrancy](blockchain/openzeppelin-ethernaut/10-re-entrancy.md)
   * [11 - Elevator](blockchain/openzeppelin-ethernaut/11-elevator.md)
   * [12 - Privacy](blockchain/openzeppelin-ethernaut/12-privacy.md)
+  * [13 - Gatekeeper One](blockchain/openzeppelin-ethernaut/13-gatekeeper-one.md)
   * [15 - Naught Coin](blockchain/openzeppelin-ethernaut/15-naught-coin.md)
   * [17 - Recovery](blockchain/openzeppelin-ethernaut/17-recovery.md)
   * [20 - Denial](blockchain/openzeppelin-ethernaut/20-denial.md)

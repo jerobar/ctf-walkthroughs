@@ -19,8 +19,8 @@ contract GatekeeperOneExploit {
      * Constructor sets the 'GatekeeperOne' contract address and calculates the
      * `_key` needed to pass its 'gateThree' modifier.
      */
-    constructor(address gateKeeperOneContractAddress) {
-        _gatekeeperOneContract = IGatekeeperOne(gateKeeperOneContractAddress);
+    constructor(address gatekeeperOneContractAddress) {
+        _gatekeeperOneContract = IGatekeeperOne(gatekeeperOneContractAddress);
         _key = bytes8(uint64(uint160(msg.sender)) & 0xFFFFFFFF0000FFFF);
     }
 

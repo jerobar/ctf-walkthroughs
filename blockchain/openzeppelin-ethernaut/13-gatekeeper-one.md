@@ -54,7 +54,7 @@ We can satisfy the other two necessary conditions (uint32 **=**= uint16 of `_gat
 
 The uint32 and uint64 values are not equal as there are non-zero bits at the beginning of the uint64 value that will not be included in the uint32 value.
 
-We can calculate the `_gateKey` we've identified above from our `tx.origin` by using a bitmask, which is a value we can use in a bitwise AND operation with `tx.origin` to retain only those bits we want to keep and use 0 for the others:
+We can calculate the `_gateKey` we've identified above from our `tx.origin` by using a bitmask, which is a value we can use in a bitwise XOR operation with `tx.origin` to retain only those bits we want to keep and use 0 for the others:
 
 **\_gateKey:** `tx.origin` ^ `0x FF FF FF FF 00 00 FF FF`
 
@@ -92,5 +92,4 @@ contract GatekeeperOneExploit {
         _gatekeeperOneContract.enter(_key);
     }
 }
-
 ```

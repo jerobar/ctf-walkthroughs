@@ -30,7 +30,7 @@ async function main() {
 
   console.log('Deploying contract from raw bytecode...')
   const deployContractTx = await playerWalletSigner.sendTransaction({
-    data: '0x600a600c600039600a6000f3604260805260206080f3'
+    data: '0x600a600c600039600a6000f3602A60805260206080f3'
   })
 
   console.log(deployContractTx)

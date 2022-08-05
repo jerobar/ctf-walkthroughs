@@ -94,3 +94,4 @@
   * [Puzzle Seven](blockchain/evm-puzzles/puzzle-seven.md)
   * [Puzzle Eight](blockchain/evm-puzzles/puzzle-eight.md)
   * [Puzzle Nine](blockchain/evm-puzzles/puzzle-nine.md)
+  * [Puzzle Ten](blockchain/evm-puzzles/puzzle-ten.md)

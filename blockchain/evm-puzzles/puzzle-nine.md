@@ -1,6 +1,6 @@
 # Puzzle Nine
 
-Enter the value to send.
+Enter the value and calldata to send.
 
 ### Bytecode
 
@@ -24,3 +24,10 @@ Enter the value to send.
 14      5B        JUMPDEST
 15      00        STOP
 ```
+
+### Solution
+
+This puzzle requires we submit both a value and a calldata. The first set of instructions from 00 - 06 will jump to 09 if and only if the byte size of our calldata is > 03. The second set of instructions from 10 (0A) - 17 (12) check that the value multiplied by the calldata equals 08. We can therefor provide the following payload to solve the challenge:
+
+**value:** 2\
+**calldata:** 0x00000004

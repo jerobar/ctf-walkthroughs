@@ -83,6 +83,7 @@
   * [14 - Gatekeeper Two](blockchain/openzeppelin-ethernaut/14-gatekeeper-two.md)
   * [15 - Naught Coin](blockchain/openzeppelin-ethernaut/15-naught-coin.md)
   * [17 - Recovery](blockchain/openzeppelin-ethernaut/17-recovery.md)
+  * [18 - Magic Number](blockchain/openzeppelin-ethernaut/18-magic-number.md)
   * [20 - Denial](blockchain/openzeppelin-ethernaut/20-denial.md)
   * [21 - Shop](blockchain/openzeppelin-ethernaut/21-shop.md)
 * [EVM puzzles](blockchain/evm-puzzles/README.md)

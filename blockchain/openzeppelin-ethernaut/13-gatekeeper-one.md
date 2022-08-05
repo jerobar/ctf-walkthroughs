@@ -14,7 +14,9 @@ Requires `gasLeft()` at the time of this instruction % 8191 == 0. This means we 
 
 We can determine how much gas has been used at this point in the program execution by using Remix's debugger to step through the code and counting the gas used by the various opcodes. We then need to supply this much gas, _plus_ enough gas such that the total is a factor of 8191. We'll need to deploy our own version of `GatekeeperOne` through Remix, making sure we use the same compiler version specified in the Ethernaut contract's `pragma` directive.
 
-This means calling the contract with the gas value XX.
+In the debugger, we are looking at the value of the stack when the `MOD` opcode is being run in the `require(gasleft().mod(8191) == 0);` modifier. The first value on the top of the stack when `MOD` is run is the result of the `gasLeft()` function call. We can use this value to determine how much _extra_ gas we need to add to our transaction so that it becomes a factor of 8191.
+
+For me, this meant calling the contract with the gas value 3005821 wei.
 
 #### **gateThree**
 

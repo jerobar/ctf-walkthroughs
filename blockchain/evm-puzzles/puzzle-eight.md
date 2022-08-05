@@ -29,3 +29,13 @@ Enter the calldata.
 1B      5B        JUMPDEST
 1C      00        STOP
 ```
+
+### Solution
+
+We need the `EQ` operation at 16 to evaluate as true, which means we need the result of the `CALL` at 13 to equal the `00` pushed by 14. `CALL` will return `0` if and only if the contract being called reverts.
+
+The first 10 steps deploy the contract initialization code we supply as the calldata. We only want this code to revert (opcode `FD`), so we can use the following payload:
+
+`0x60FD6000526001601ff3`
+
+This code is similar to the previous solution, with only the second byte changed from an `01` to the REVERT opcode `FD`. This will deploy a contract that reverts when it is called.

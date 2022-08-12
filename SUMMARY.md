@@ -97,3 +97,5 @@
   * [Puzzle Eight](blockchain/evm-puzzles/puzzle-eight.md)
   * [Puzzle Nine](blockchain/evm-puzzles/puzzle-nine.md)
   * [Puzzle Ten](blockchain/evm-puzzles/puzzle-ten.md)
+* [Damn Vulnerable DeFi](blockchain/damn-vulnerable-defi/README.md)
+  * [3 - Truster](blockchain/damn-vulnerable-defi/3-truster.md)

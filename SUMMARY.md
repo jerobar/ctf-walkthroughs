@@ -98,4 +98,5 @@
   * [Puzzle Nine](blockchain/evm-puzzles/puzzle-nine.md)
   * [Puzzle Ten](blockchain/evm-puzzles/puzzle-ten.md)
 * [Damn Vulnerable DeFi](blockchain/damn-vulnerable-defi/README.md)
+  * [1 - Unstoppable](blockchain/damn-vulnerable-defi/1-unstoppable.md)
   * [3 - Truster](blockchain/damn-vulnerable-defi/3-truster.md)

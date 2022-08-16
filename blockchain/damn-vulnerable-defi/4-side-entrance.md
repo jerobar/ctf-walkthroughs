@@ -1,6 +1,6 @@
 # 4 - Side Entrance
 
-Scripted Solution
+### Scripted Solution
 
 ```solidity
 // SPDX-License-Identifier: MIT

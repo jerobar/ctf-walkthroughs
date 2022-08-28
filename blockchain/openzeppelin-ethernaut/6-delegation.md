@@ -9,8 +9,8 @@ description: >-
 ### Scripted Solution
 
 ```javascript
-const fs = require('fs')
 const ethers = require('ethers')
+const fs = require('fs')
 require('dotenv').config({ path: './.env' })
 
 /**
@@ -44,7 +44,6 @@ async function main() {
     'Delegation'
   )
 
-  // Get initial contract owner address
   console.log(`Delegation contract owner: ${await delegationContract.owner()}`)
 
   // Method id: first four bytes of the keccak256 hash of the function signature

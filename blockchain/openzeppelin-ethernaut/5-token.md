@@ -14,7 +14,7 @@ In [this level](https://ethernaut.openzeppelin.com/level/0x63bE8347A617476CA4616
 
 <summary>Hint One</summary>
 
-The thing to keep in mind about this level is we're being asked to transfer _more_ _tokens_ than we actually have.
+The thing to keep in mind about this level is you're being asked to transfer more tokens than you actually have. Where, exactly, in the contract code is this being prevented and how?
 
 </details>
 
@@ -22,7 +22,7 @@ The thing to keep in mind about this level is we're being asked to transfer _mor
 
 <summary>Hint Two</summary>
 
-How might Solidity handle a "negative" unsigned integer?
+How does a car’s odometer handle you driving one more mile than it can display? How might the version of Solidity the challenge contract is compiled with handle an operation that results in a **negative** unsigned integer? Are there limits to how big or small a value can be contained in a uint type variable?
 
 </details>
 
@@ -54,8 +54,8 @@ Because the require statement subtracts `_value` from `balances[msg.sender]`, if
 ### Scripted Solution
 
 ```javascript
-const ethers = require('ethers')
 const fs = require('fs')
+const ethers = require('ethers')
 require('dotenv').config({ path: './.env' })
 
 /**

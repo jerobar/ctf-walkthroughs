@@ -1,5 +1,31 @@
 # 16 - Preservation
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+The `Preservation` contract uses `delegatecall` to execute functions on the `LibraryContract`. When the `LibraryContract` executes an expression to update a state variable, on which contract is this state variable updated?
+
+</details>
+
+<details>
+
+<summary>Hint Two</summary>
+
+The `LibraryContract` only contains one state variable, as opposed to the \`Preservation\` contract’s five state variables. What does this mean in terms of which memory slots the `LibraryContract` may update on the calling contract?
+
+</details>
+
+<details>
+
+<summary>Hint Three</summary>
+
+As the `LibraryContract` can only update the first storage slot of `Preservation`, this contract will not grant you sufficient leverage to update the `owner` variable on its own. Right idea, wrong storage slot being updated.
+
+</details>
+
 ### Scripted Solution
 
 ```solidity

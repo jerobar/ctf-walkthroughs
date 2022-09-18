@@ -1,23 +1,5 @@
 # 12 - Privacy
 
-### Hints
-
-<details>
-
-<summary>Hint One</summary>
-
-The trick to solving this challenge is first determining which storage slot the `data[2]` value is located in. State variables are generally assigned to storage slots in the order in which they are declared, however, certain variable types are small enough to be grouped along with their neighbors into the same slot. You will need to review the rules that determine the layout of state variables in storage.
-
-</details>
-
-<details>
-
-<summary>Hint Two</summary>
-
-Once you have retrieved `data[2]` from storage slot 5, you will need to convert it from **bytes32** to **bytes16** before using it as the `_key` to call the contract’s `unlock` function. When the larger bytes type value is converted into the smaller bytes type, which “half” of the larger value’s bytes are discarded? Left or right?
-
-</details>
-
 ### Notes
 
 Storage is an array of 2\*\*256 32-byte slots. Values are written into storage in the order in which they are declared. Neighboring values may be packed right-to-left into the same slot (if they fit).
@@ -109,7 +91,7 @@ async function main() {
   // Unlock contract by calling `unlock` with bytes16 key
   console.log('Unlocking contract with key...')
   const unlock = await privacyContract.unlock(bytes16Key)
-  await unlock.wait(1)
+  unlock.wait(1)
 
   // // Confirm contract is unlocked
   console.log(`Contract locked: ${await privacyContract.locked()}.`)

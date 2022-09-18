@@ -14,7 +14,7 @@ This [level](https://capturetheether.com/challenges/lotteries/guess-the-new-numb
 
 <summary>Hint One</summary>
 
-Anything the `GuessTheNewNumberChallenge` contract can do, a contract we deploy can do as well.&#x20;
+Anything the `GuessTheNewNumberChallenge` contract can do, a contract you create can do as well. Any contract you deploy to interact with the challenge contract will run in the context of the same `block.number`, `block.timestamp`, etc. as the challenge contract’s code it calls is part of the same transaction and “bundled up” into the same block.
 
 </details>
 

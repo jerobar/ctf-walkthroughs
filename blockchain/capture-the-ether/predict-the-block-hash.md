@@ -15,7 +15,7 @@ This [challenge](https://capturetheether.com/challenges/lotteries/predict-the-bl
 
 <summary>Hint One</summary>
 
-What happens when we try to get the block hash for a non-existent block number in our Solidity contract?
+What happens when you try to get the block hash for a non-existent block number in your Solidity contract?
 
 </details>
 
@@ -23,7 +23,15 @@ What happens when we try to get the block hash for a non-existent block number i
 
 <summary>Hint Two</summary>
 
-The solution depends in part on how many block hashes the `blockhash` function can be used to access. What might this limitation mean in light of the previous hint?
+The solution depends in part on how many block hashes the blockhash function can be used to access. What might this limitation mean in light of the previous hint?
+
+</details>
+
+<details>
+
+<summary>Hint Three</summary>
+
+This solution will require some patience on your part!
 
 </details>
 

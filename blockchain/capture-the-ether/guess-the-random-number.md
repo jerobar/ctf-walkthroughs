@@ -14,7 +14,7 @@ description: >-
 
 <summary>Hint One</summary>
 
-Remember that data stored on the blockchain is publicly accessible, including the value of this contract's `answer` variable. The question is, where do contracts store their state variables and how exactly can we access them pragmatically?
+Remember that data stored on the blockchain is publicly accessible, including the value of this contract's `answer` variable. The question is, where do contracts store their state variables and how can you access them pragmatically?
 
 </details>
 

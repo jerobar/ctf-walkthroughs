@@ -2,6 +2,16 @@
 
 Enter the value to send.
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+The value sent to determines which destination the first `JUMP` opcode jumps to. Your goal is to avoid `REVERT` and reach a `STOP` successfully.
+
+</details>
+
 ### Bytecode
 
 ```

@@ -2,6 +2,16 @@
 
 Enter the value to send.
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+This problem hinges on getting the `EQ` in step `0x06` to evaluate to true.
+
+</details>
+
 ### Bytecode
 
 ```

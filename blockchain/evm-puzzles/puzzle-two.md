@@ -2,6 +2,16 @@
 
 Enter the value to send.
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+The `SUB` opcode will subtract the `CALLVALUE` from the `CODESIZE`. You can determine the `CODESIZE` by noting the byte offset of the last instruction (in this case `0x09`) and adding one to account for the `0x00` instruction.
+
+</details>
+
 ### Bytecode
 
 ```

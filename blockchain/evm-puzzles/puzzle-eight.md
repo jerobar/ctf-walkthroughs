@@ -2,6 +2,24 @@
 
 Enter the calldata.
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+You need the `EQ` operation at step `0x16` to evaluate to true, which means the result of the `CALL` at `0x13` is equal to the `0x00` pushed by step `0x14`. `CALL` will return 0 if and only if the contract being called reverts. The bytecode from the previous puzzle can almost be used to solve this level, you will just need to tweak it slightly…
+
+</details>
+
+<details>
+
+<summary>Hint Two</summary>
+
+The REVERT opcode is `0xFD`.&#x20;
+
+</details>
+
 ### Bytecode
 
 ```

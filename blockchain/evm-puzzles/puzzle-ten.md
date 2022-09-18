@@ -2,6 +2,24 @@
 
 Enter the value and calldata to send.
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+The first section of the bytecode, steps `0x00` - `0x06`, will jump the program to `0x08` if and only if the value you supply is less than `0x1A` (26).
+
+</details>
+
+<details>
+
+<summary>Hint Two</summary>
+
+The second section of the bytecode, steps `0x09` - `0x14`, requires both that your value plus 10 equals a specific number and that your calldata size in bytes is a factor of a another specific number.
+
+</details>
+
 ### Bytecode
 
 ```

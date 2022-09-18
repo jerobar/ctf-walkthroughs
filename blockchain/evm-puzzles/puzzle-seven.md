@@ -2,6 +2,36 @@
 
 Enter the calldata.
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+This puzzle involves submitting the initialization code of your own contract. It is a significant step up in difficulty from the first six puzzles.
+
+You need the `EQ` comparison in step `0x0E` to evaluate to true, which means you need the `BYTECODESIZE` of the deployed contract to be equal to `0x01`. You must therefore send in the calldata the initialization code for a contract that will return a code of this byte size.
+
+</details>
+
+<details>
+
+<summary>Hint Two</summary>
+
+The following is an incomplete implementation of the bytecode needed to solve this puzzle:
+
+`6001 PUSH1 0x01` (0x01 is the value we ultimately want to return)&#x20;
+
+`60?? PUSH1 ????` (first argument of the MSTORE opcode below)&#x20;
+
+`52 MSTORE`
+
+`60?? PUSH1 ????` (size argument of RETURN opcode below)&#x20;
+
+`601F PUSH1 0x1F` (offset argument of RETURN opcode below) F3 RETURN
+
+</details>
+
 ### Bytecode
 
 ```

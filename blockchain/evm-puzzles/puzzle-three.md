@@ -2,6 +2,16 @@
 
 Enter the calldata.
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+You want to set the program counter to `0x04`, which means you need to supply a calldata with a total size of 4 bytes.
+
+</details>
+
 ### Bytecode
 
 ```

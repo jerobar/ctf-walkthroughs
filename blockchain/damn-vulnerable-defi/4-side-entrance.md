@@ -1,5 +1,31 @@
 # 4 - Side Entrance
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+You will need to deploy your own smart contract to solve this challenge.
+
+</details>
+
+<details>
+
+<summary>Hint Two</summary>
+
+This is a re-entrancy exploit.
+
+</details>
+
+<details>
+
+<summary>Hint Three</summary>
+
+The two `require` statements in `flashLoan` check the balance of the pool contract address is not less than it was before calling your contract’s `execute` function. This means that whatever exploit logic your `execute` function implements, it cannot decrement this balance. What else could it do?
+
+</details>
+
 ### Scripted Solution
 
 ```solidity

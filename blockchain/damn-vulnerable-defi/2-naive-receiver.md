@@ -1,5 +1,23 @@
 # 2 - Naive Receiver
 
+### Hints
+
+<details>
+
+<summary>Hint One</summary>
+
+Carefully walk through the logic of calling a flash loan on behalf of the receiver contract.
+
+</details>
+
+<details>
+
+<summary>Hint Two</summary>
+
+How does the receive contract afford these expensive transaction fees?
+
+</details>
+
 ### Scripted Solution
 
 ```javascript

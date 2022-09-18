@@ -2,6 +2,18 @@
 
 Enter the value to send.
 
+### Hints
+
+<details>
+
+<summary>Hint one</summary>
+
+You want the `JUMP` at step `0x03` to set the program counter to 10. This means the result of the XOR between `CODESIZE` (12 or 1100) and `CALLVALUE` must be 10 (or 1010).
+
+1100 ^ ???? = 1010, where ??? is the binary representation of the value to submit.
+
+</details>
+
 ### Bytecode
 
 ```

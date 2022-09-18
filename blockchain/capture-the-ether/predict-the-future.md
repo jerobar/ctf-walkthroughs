@@ -14,7 +14,7 @@ In this [level](https://capturetheether.com/challenges/lotteries/predict-the-fut
 
 <summary>Hint One</summary>
 
-Solving this problem does not depend at all on which value you choose for your guess. It simply needs to be one of the ten possible answers.
+Interestingly enough, solving this problem does not depend at all on which value we choose for our guess. It simply needs to be one of the ten possible answers.
 
 </details>
 
@@ -22,15 +22,7 @@ Solving this problem does not depend at all on which value you choose for your g
 
 <summary>Hint Two</summary>
 
-Lock in any guess between 0 and 9. For any value you choose, `settle` will sometimes generate an answer equal to it. So, is there a way to call `settle` without **really** “settling” so as to avoid settling on a value that doesn't match your guess? You will need to deploy a contract of your own in order to do this.
-
-</details>
-
-<details>
-
-<summary>Hint Three</summary>
-
-What happens when your contract calls `settle` then reverts?
+Lock in any guess between 0 and 9. The solution depends on when we choose to call `settle`. For any value we choose, `settle` will _sometimes_ generate an answer equal to it. So, is there a way to call `settle` without _really_ calling `settle` so as to avoid settling on a value that doesn't match our guess?
 
 </details>
 

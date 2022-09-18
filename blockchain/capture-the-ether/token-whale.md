@@ -14,7 +14,7 @@ This [level](https://capturetheether.com/challenges/math/token-whale/) asks us t
 
 <summary>Hint One</summary>
 
-The key to this exploit is still a "math" vulnerability much like the previous level. It's just obscured by one extra step, a particular oversight in the contract's implementation that is not math-related.
+The key to this exploit is still a "math" vulnerability. It's just obscured by an extra step, an error in the contract's implementation that is not itself math-related.
 
 </details>
 
@@ -22,7 +22,7 @@ The key to this exploit is still a "math" vulnerability much like the previous l
 
 <summary>Hint Two</summary>
 
-The "math" vulnerability we need to take advantage of is found in the `_transfer` function when called from `transferFrom`. We need to be able to satisfy each of the latter's `require` conditions first.
+The vulnerability you need to take advantage of is found in the `_transfer` function when called from `transferFrom`. You need to be able to satisfy each of the latter's `require` conditions first.
 
 </details>
 
@@ -30,7 +30,7 @@ The "math" vulnerability we need to take advantage of is found in the `_transfer
 
 <summary>Hint Three</summary>
 
-We will need to issue transactions from _two_ separate EOAs to solve this level.
+You will need to issue transactions from **two** separate EOAs to solve this level.
 
 </details>
 

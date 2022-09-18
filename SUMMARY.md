@@ -64,6 +64,7 @@
   * [Guess the new number](blockchain/capture-the-ether/guess-the-new-number.md)
   * [Predict the future](blockchain/capture-the-ether/predict-the-future.md)
   * [Predict the block hash](blockchain/capture-the-ether/predict-the-block-hash.md)
+  * [Token Bank](blockchain/capture-the-ether/token-bank.md)
   * [Token sale](blockchain/capture-the-ether/token-sale.md)
   * [Token whale](blockchain/capture-the-ether/token-whale.md)
 * [OpenZeppelin - Ethernaut](blockchain/openzeppelin-ethernaut/README.md)

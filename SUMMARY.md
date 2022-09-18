@@ -85,6 +85,7 @@
   * [16 - Preservation](blockchain/openzeppelin-ethernaut/16-preservation.md)
   * [17 - Recovery](blockchain/openzeppelin-ethernaut/17-recovery.md)
   * [18 - Magic Number](blockchain/openzeppelin-ethernaut/18-magic-number.md)
+  * [19 - Alien Codex](blockchain/openzeppelin-ethernaut/19-alien-codex.md)
   * [20 - Denial](blockchain/openzeppelin-ethernaut/20-denial.md)
   * [21 - Shop](blockchain/openzeppelin-ethernaut/21-shop.md)
   * [24 - Puzzle Wallet](blockchain/openzeppelin-ethernaut/24-puzzle-wallet.md)

@@ -1,23 +1,5 @@
 # 15 - Naught Coin
 
-### Hints
-
-<details>
-
-<summary>Hint One</summary>
-
-The `NaughtCoin` contract extends the OpenZeppelin `ERC20` contract, which means it has inherited variables and functions not present in its own source code. Perhaps you can find a way to get around the `lockTokens`ex modifier there?
-
-</details>
-
-<details>
-
-<summary>Hint Two</summary>
-
-You will need to solve this challenge in two steps. The first is to increase the allowance your player account is allowed to spend via the ERC20 contract’s `increaseAllowance` function.
-
-</details>
-
 ### Scripted Solution
 
 ```javascript

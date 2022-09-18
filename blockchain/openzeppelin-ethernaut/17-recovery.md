@@ -1,31 +1,5 @@
 # 17 - Recovery
 
-### Hints
-
-<details>
-
-<summary>Hint One</summary>
-
-After generating the level instance, take a look at the instance address in a block explorer such as Etherscan. This is the `Recovery` contract. Are there any interesting internal transactions?
-
-</details>
-
-<details>
-
-<summary>Hint Two</summary>
-
-You can look at the “Contract Creation” internal transaction on Etherscan to locate the address of the new `SimpleToken` instance deployed by the level. Now your challenge is to drain this contract of ether.
-
-</details>
-
-<details>
-
-<summary>Hint Three</summary>
-
-The `SimpleToken` contract contains a strange global function you haven’t seen in other challenges.
-
-</details>
-
 ### Scripted Solution
 
 ```javascript

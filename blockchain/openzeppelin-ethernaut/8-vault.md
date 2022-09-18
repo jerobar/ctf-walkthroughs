@@ -4,24 +4,6 @@ description: In Ethernaut's Vault, we look at how "private" on-chain data really
 
 # 8 - Vault
 
-### Hints
-
-<details>
-
-<summary>Hint One</summary>
-
-The `password` is a private state variable in the challenge contract, which means Solidity has not generated a public getter method for it. However, nothing on the blockchain is truly inaccessible. Contracts store their state variables in storage “slots”. What is the layout of these state variables in storage? How do you determine which variable has been stored in which slot?
-
-</details>
-
-<details>
-
-<summary>Hint Two</summary>
-
-After determining which storage slot the `password` variable is stored in, you’ll likely want to use a library such as Ethers or Web3 to get the storage at that slot so you can submit it to the contract’s `unlock` function and solve the challenge.
-
-</details>
-
 ### Notes
 
 Variables are stored in "slots" - often slot index position starting from 0, by variable, but Ethereum tries to make storage as efficient as possible and may mix this up.&#x20;

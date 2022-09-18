@@ -6,29 +6,11 @@ description: >-
 
 # 6 - Delegation
 
-### Hints
-
-<details>
-
-<summary>Hint One</summary>
-
-The only way to interact with the deployed `Delegation` contract is via its `fallback` function. This is where you will send your exploit transaction. The fallback function will in turn call `delegatecall` on the `Delegate` contract. What piece data do you control that may affect the outcome of this call? When a function on contract B is executed via `delegatecall` from contract A updates a state variable, on which contract is that variable actually updated?
-
-</details>
-
-<details>
-
-<summary>Hint Two</summary>
-
-The `delegatecall` function takes the first four bytes of the keccak256 hash of the function signature to call as its first argument. When a function is run via `delegatecall` it is executed in the context of the contract that called it, meaning any changes it makes to any state variables will be reflected in the calling contract, not the contract being called.
-
-</details>
-
 ### Scripted Solution
 
 ```javascript
-const fs = require('fs')
 const ethers = require('ethers')
+const fs = require('fs')
 require('dotenv').config({ path: './.env' })
 
 /**
@@ -62,7 +44,6 @@ async function main() {
     'Delegation'
   )
 
-  // Get initial contract owner address
   console.log(`Delegation contract owner: ${await delegationContract.owner()}`)
 
   // Method id: first four bytes of the keccak256 hash of the function signature

@@ -14,7 +14,7 @@ The goal of [this level](https://ethernaut.openzeppelin.com/level/0x0b6F6CE4BCfB
 
 <summary>Hint One</summary>
 
-The solution to this level is to call the contract's `changeOwner` function with a transaction that has a different `tx.origin` and `msg.sender`. The `tx.origin` will always be the address of the originating wallet making the transaction, how is `msg.sender` different?
+The solution to this level is to call the contract's `changeOwner` function with a transaction that has a different `tx.origin` and `msg.sender`. The `tx.origin` will always be the originating wallet making the transaction, but `msg.sender` can be a contract address.
 
 </details>
 

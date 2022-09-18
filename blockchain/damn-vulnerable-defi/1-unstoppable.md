@@ -1,23 +1,5 @@
 # 1 - Unstoppable
 
-### Hints
-
-<details>
-
-<summary>Hint One</summary>
-
-There are more ways to break a flash loan than draining the contract’s token balance.
-
-</details>
-
-<details>
-
-<summary>Hint Two</summary>
-
-Simply asserting something doesn’t make it true.
-
-</details>
-
 ### Scripted Solution
 
 ```javascript

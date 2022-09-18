@@ -2,16 +2,6 @@
 
 Enter the value and calldata to send.
 
-### Hints
-
-<details>
-
-<summary>Hint One</summary>
-
-This puzzle requires you submit both a value and a calldata. The first set of instructions from `0x00` - `0x06` will jump to `0x09` if the byte size of your calldata is greater than a specific number. The second set of instructions from `0x0A` - `0X12` check that the value multiplied by the calldata equals another specific number.
-
-</details>
-
 ### Bytecode
 
 ```
